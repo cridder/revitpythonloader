@@ -65,6 +65,7 @@ namespace RevitPythonLoader
 
                 var scriptOutput = new ScriptOutput();
                 scriptOutput.Show();
+                //scriptOutput.Hide();
                 var outputStream = new ScriptOutputStream(scriptOutput, engine);
 
                 scope.SetVariable("__window__", scriptOutput);
