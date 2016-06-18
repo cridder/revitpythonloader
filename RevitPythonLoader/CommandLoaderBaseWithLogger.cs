@@ -49,9 +49,9 @@ namespace RevitPythonLoader
 
             var result = executor.ExecuteScript(source, _scriptSource);
             message = executor.Message;
-            string temppath = Path.Combine(Path.GetTempPath(), "pyrevitlog.txt");
             string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             string username = commandData.Application.Application.Username;
+            string temppath = Path.Combine(Path.GetTempPath(), username + "pyrevitlog.txt");
             string rvtversion = commandData.Application.Application.VersionNumber;
             using (var logger = File.AppendText(temppath))
             {
